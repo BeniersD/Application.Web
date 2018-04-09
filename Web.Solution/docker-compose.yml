@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  application.web:
+    image: applicationweb
+    build:
+      context: .
+      dockerfile: Application.Web\Dockerfile
+
+  application.entities:
+    image: applicationentities
+    build:
+      context: .
+      dockerfile: Application.Entities\Dockerfile
+
+
+  application.data:
+    image: applicationdata
+    build:
+      context: .
+      dockerfile: Application.Data\Dockerfile
+
+
+  application.common:
+    image: applicationcommon
+    build:
+      context: .
+      dockerfile: Application.common\Dockerfile
+
